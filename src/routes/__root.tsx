@@ -1,18 +1,24 @@
 import { createRootRoute, Outlet } from '@tanstack/react-router'
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
-import { StrictMode } from 'react'
+import { StrictMode, useState } from 'react'
 import { SideBar } from '../components/SideBar'
 import Header from '../components/Header'
 
 export const Route = createRootRoute({
-	component: () => (
+	component: RootLayout,
+})
+
+function RootLayout() {
+	const [isSidebarOpen, setSidebarOpen] = useState(false);
+
+	return (
 		<StrictMode>
-			<SideBar />
+			<SideBar isSidebarOpen={isSidebarOpen} />
 			<div className='flex-1 overflow-scroll relative'>
-				<Header />
+				<Header isSidebarOpen={isSidebarOpen} setSidebarOpen={setSidebarOpen}/>
 				<Outlet />
 			</div>
 			<TanStackRouterDevtools />
 		</StrictMode>
-	),
-})
+	);
+}
