@@ -6,7 +6,7 @@ export const Route = createFileRoute('/')({
 
 function App() {
 	return (
-		<div className='h-1000 bg-base-light'>
+		<div className='h-1000'>
 			routes/index
 		</div>
 	)

@@ -13,10 +13,12 @@ function RootLayout() {
 
 	return (
 		<StrictMode>
-			<SideBar isSidebarOpen={isSidebarOpen}  setSidebarOpen={setSidebarOpen}/>
-			<div className='flex-1 overflow-scroll relative'>
-				<Header isSidebarOpen={isSidebarOpen} setSidebarOpen={setSidebarOpen}/>
-				<Outlet />
+			<SideBar isSidebarOpen={isSidebarOpen} setSidebarOpen={setSidebarOpen} />
+			<div className='flex-1 overflow-scroll relative bg-base-light'>
+				<Header isSidebarOpen={isSidebarOpen} setSidebarOpen={setSidebarOpen} />
+				<div className='p-10'>
+					<Outlet />
+				</div>
 			</div>
 			<TanStackRouterDevtools />
 		</StrictMode>
