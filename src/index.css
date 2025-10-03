@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+	/* Base colors */
+	--color-base-light: #F9FAFB;
+	--color-base: #FFFFFF;
+
+	/* Sub colors */
+	--color-sub-light: #E5E7EB;
+	--color-sub: #D1D5DB;
+
+	/* Accent colors */
+	--color-accent-blue: #465fff;
+	--color-accent-lightBlue: #ecf3ff;
+	--color-accent-cyan: #06B6D4;
+	--color-accent-lime: #84CC16;
+
+	/* Text colors */
+	--color-text-primary: #111827;
+	--color-text-secondary: #6B7280;
+
+	/* border */
+	--color-border-lightGray: #D1D5DB;
+}
+
+/* Background classes */
+.bg-base-light {
+	background-color: var(--color-base-light);
+}
+
+.bg-base {
+	background-color: var(--color-base);
+}
+
+.bg-sub-light {
+	background-color: var(--color-sub-light);
+}
+
+.bg-sub {
+	background-color: var(--color-sub);
+}
+
+.bg-accent-blue {
+	background-color: var(--color-accent-blue);
+}
+
+.bg-accent-lightBlue {
+	background-color: var(--color-accent-lightBlue);
+}
+
+.bg-accent-cyan {
+	background-color: var(--color-accent-cyan);
+}
+
+.bg-accent-lime {
+	background-color: var(--color-accent-lime);
+}
+
+/* Text color classes */
+.text-primary {
+	color: var(--color-text-primary);
+}
+
+.text-secondary {
+	color: var(--color-text-secondary);
+}
