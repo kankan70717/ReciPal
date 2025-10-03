@@ -13,7 +13,7 @@ function RootLayout() {
 
 	return (
 		<StrictMode>
-			<SideBar isSidebarOpen={isSidebarOpen} />
+			<SideBar isSidebarOpen={isSidebarOpen}  setSidebarOpen={setSidebarOpen}/>
 			<div className='flex-1 overflow-scroll relative'>
 				<Header isSidebarOpen={isSidebarOpen} setSidebarOpen={setSidebarOpen}/>
 				<Outlet />

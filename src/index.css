@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+body {
+	font-family: 'Nunito', sans-serif;
+}
+
 :root {
 	/* Base colors */
 	--color-base-light: #F9FAFB;
