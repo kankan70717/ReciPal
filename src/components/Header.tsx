@@ -13,7 +13,7 @@ export default function Header({
 	const [isProfileOpen, setProfileOpen] = useState(false);
 
 	return (
-		<header className="sticky top-0 left-0 right-0 h-20 flex items-center justify-between px-5 border-b-1 border-[var(--color-border-lightGray)] bg-white">
+		<header className="sticky z-100 top-0 left-0 right-0 h-20 flex items-center justify-between px-5 border-b-1 border-[var(--color-border-lightGray)] bg-white">
 			<div className={`border border-[var(--color-border-lightGray)] w-10 h-10 rounded-full flex justify-center items-center`}>
 				{
 					isSidebarOpen ?
