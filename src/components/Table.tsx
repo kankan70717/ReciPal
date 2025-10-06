@@ -1,8 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import iriko from "../assets/iriko.jpg";
 import { faSliders } from "@fortawesome/free-solid-svg-icons";
+import type { Dispatch, SetStateAction } from "react";
 
-export function Table() {
+export function Table({
+	setFilterOpen
+}: {
+	setFilterOpen: Dispatch<SetStateAction<boolean>>
+}) {
 
 	return (
 		<div id="table" className="capitalize rounded-2xl bg-white border border-[var(--color-border-lightGray)] overflow-scroll h-full">
@@ -11,7 +16,9 @@ export function Table() {
 					dish
 				</div>
 				<div>
-					<button className="flex items-center gap-2 py-2 px-3 rounded-2xl border border-[var(--color-border-lightGray)]">
+					<button
+						className="flex items-center gap-2 py-2 px-3 rounded-2xl border border-[var(--color-border-lightGray)]"
+						onClick={() => setFilterOpen(true)}>
 						<FontAwesomeIcon icon={faSliders} />
 						<span className="capitalize">filter</span>
 						<div className="flex items-center justify-center rounded-full w-6 h-6 bg-[var(--color-accent-lightBlue)] text-[var(--color-accent-blue)]">

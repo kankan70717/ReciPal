@@ -16,7 +16,7 @@ function RootLayout() {
 			<SideBar isSidebarOpen={isSidebarOpen} setSidebarOpen={setSidebarOpen} />
 			<div className='flex-1 overflow-scroll relative bg-base-light'>
 				<Header isSidebarOpen={isSidebarOpen} setSidebarOpen={setSidebarOpen} />
-				<div className='p-10 h-[calc(100vh-5rem)]'>
+				<div className='relative p-10 h-[calc(100vh-5rem)]'>
 					<Outlet />
 				</div>
 			</div>
