@@ -15,7 +15,7 @@ export function SideBar({
 
 	return (
 		<>
-			<div id="overlay" className={`md:hidden absolute inset-0 z-50 ${isSidebarOpen ? "block bg-black/50" : "bg-none"}`}
+			<div id="overlay" className={`hidden absolute inset-0 z-50 ${isSidebarOpen ? "block bg-black/50" : "bg-none"}`}
 				onClick={() => setSidebarOpen(prev => !prev)}></div>
 			<div id="sideBar" className={`flex flex-col items-center gap-3 py-5 px-3 border-r-1 border-[var(--color-border-lightGray)] ease-in-out duration-500 fixed top-0 bottom-0 left-0 bg-white -translate-x-full z-100 md:relative md:translate-x-0 ${isSidebarOpen ? "translate-x-0 w-50" : "w-20"}`}>
 				<Link to="/">

@@ -9,7 +9,7 @@ export function Filter({
 }) {
 
 	return (
-		<div className={`absolute inset-0 p-20 ${isFilterOpen && "z-100 bg-black/50"}`}>
+		<div className={`absolute inset-0 p-20 ${isFilterOpen ? "z-100 bg-black/50" : "hidden"}`}>
 			<div className={`bg-white p-10 ${isFilterOpen ? "block" : "hidden"}`}>
 				<button onClick={() => setFilterOpen(false)}>button</button>
 				filter
