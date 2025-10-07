@@ -28,7 +28,7 @@ export function Table({
 				</div>
 			</div>
 			<div className="flex-1 w-full overflow-auto">
-				<table className="min-w-max w-full border-separate border-spacing-0">
+				<table className="min-w-max w-full border-separate border-spacing-0 text-sm">
 					<thead className="h-16 sticky top-0 z-40 bg-base-light">
 						<tr>
 							<th className="bg-base-light px-5 border-y border-[var(--color-border-lightGray)] sticky left-0">name</th>

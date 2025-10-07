@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { Table } from '../components/Table'
 import { Filter } from '../components/Filter';
 import { useState } from 'react';
+import { ListDetail } from '../components/ListDetail';
 
 export const Route = createFileRoute('/search')({
 	component: Search,
@@ -12,7 +12,8 @@ function Search() {
 
 	return (
 		<>
-			<Table setFilterOpen={setFilterOpen} />
+			{/* <Table setFilterOpen={setFilterOpen} /> */}
+			<ListDetail setFilterOpen={setFilterOpen} />
 			<Filter isFilterOpen={isFilterOpen} setFilterOpen={setFilterOpen}/>
 		</>
 	);
