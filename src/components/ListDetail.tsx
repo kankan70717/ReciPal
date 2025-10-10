@@ -12,7 +12,7 @@ export function ListDetail({
 	return (
 		<div className="flex flex-col capitalize rounded-2xl bg-white border border-[var(--color-border-lightGray)] h-full overflow-hidden text-sm">
 			{/* header */}
-			<div className="h-16 flex items-center justify-between px-10 bg-white border-b border-[var(--color-border-lightGray)]">
+			<div className="h-16 flex items-center justify-between px-5 bg-white border-b border-[var(--color-border-lightGray)]">
 				<div className="text-xl font-bold">
 					dish
 				</div>
@@ -28,9 +28,9 @@ export function ListDetail({
 					</button>
 				</div>
 			</div>
-			<div className="flex-1 flex divide-x divide-[var(--color-border-lightGray)] h-50">
+			<div className="flex-1 flex md:divide-x divide-[var(--color-border-lightGray)] h-50">
 				{/* list */}
-				<div className="flex-1/3 flex flex-col overflow-y-scroll">
+				<div className="md:flex-1/3 flex-1 flex flex-col overflow-y-scroll">
 					<div className="flex items-center gap-2 p-5 hover:bg-[var(--color-accent-lightBlue)] hover:text-[var(--color-accent-blue)]">
 						<div className="w-15 h-15 rounded-full overflow-hidden">
 							<img src={iriko} className="object-cover w-full h-full" />
@@ -39,7 +39,7 @@ export function ListDetail({
 					</div>
 				</div>
 				{/* detail */}
-				<div className="flex-2/3 p-5 overflow-y-scroll">
+				<div className="md:block md:flex-2/3 p-5 overflow-y-scroll hidden">
 					a
 				</div>
 			</div>

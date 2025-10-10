@@ -13,7 +13,6 @@ import { Route as UserRouteImport } from './routes/user'
 import { Route as SettingRouteImport } from './routes/setting'
 import { Route as SearchRouteImport } from './routes/search'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as SubIndexRouteImport } from './routes/sub/index'
 
 const UserRoute = UserRouteImport.update({
   id: '/user',
@@ -35,25 +34,18 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SubIndexRoute = SubIndexRouteImport.update({
-  id: '/sub/',
-  path: '/sub/',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/search': typeof SearchRoute
   '/setting': typeof SettingRoute
   '/user': typeof UserRoute
-  '/sub': typeof SubIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/search': typeof SearchRoute
   '/setting': typeof SettingRoute
   '/user': typeof UserRoute
-  '/sub': typeof SubIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -61,14 +53,13 @@ export interface FileRoutesById {
   '/search': typeof SearchRoute
   '/setting': typeof SettingRoute
   '/user': typeof UserRoute
-  '/sub/': typeof SubIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/search' | '/setting' | '/user' | '/sub'
+  fullPaths: '/' | '/search' | '/setting' | '/user'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/search' | '/setting' | '/user' | '/sub'
-  id: '__root__' | '/' | '/search' | '/setting' | '/user' | '/sub/'
+  to: '/' | '/search' | '/setting' | '/user'
+  id: '__root__' | '/' | '/search' | '/setting' | '/user'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -76,7 +67,6 @@ export interface RootRouteChildren {
   SearchRoute: typeof SearchRoute
   SettingRoute: typeof SettingRoute
   UserRoute: typeof UserRoute
-  SubIndexRoute: typeof SubIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -109,13 +99,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/sub/': {
-      id: '/sub/'
-      path: '/sub'
-      fullPath: '/sub'
-      preLoaderRoute: typeof SubIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
@@ -124,7 +107,6 @@ const rootRouteChildren: RootRouteChildren = {
   SearchRoute: SearchRoute,
   SettingRoute: SettingRoute,
   UserRoute: UserRoute,
-  SubIndexRoute: SubIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

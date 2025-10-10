@@ -14,7 +14,7 @@ export function Filter({
 		<div className={`absolute inset-0 p-20 ${isFilterOpen ? "z-100 bg-black/50" : "hidden"}`}>
 			<div className={`rounded-2xl bg-white p-10 ${isFilterOpen ? "block" : "hidden"}`}>
 				<div className="flex items-center justify-between">
-					<div className="capitalize text-2xl">filter</div>
+					<div className="capitalize text-xl font-bold">filter</div>
 					<div
 						className="border border-[var(--color-border-lightGray)] rounded-full w-10 h-10 flex items-center justify-center"
 						onClick={() => setFilterOpen(false)}>

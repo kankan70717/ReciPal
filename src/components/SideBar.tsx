@@ -15,19 +15,16 @@ export function SideBar({
 
 	return (
 		<>
-			<div id="overlay" className={`hidden absolute inset-0 z-50 ${isSidebarOpen ? "block bg-black/50" : "bg-none"}`}
+			<div id="overlay" className={`absolute inset-0 z-50 md:hidden ${isSidebarOpen ? "block bg-black/50" : "hidden"}`}
 				onClick={() => setSidebarOpen(prev => !prev)}></div>
 			<div id="sideBar" className={`flex flex-col items-center gap-3 py-5 px-3 border-r-1 border-[var(--color-border-lightGray)] ease-in-out duration-500 fixed top-0 bottom-0 left-0 bg-white -translate-x-full z-100 md:relative md:translate-x-0 ${isSidebarOpen ? "translate-x-0 w-50" : "w-20"}`}>
 				<Link to="/">
-					{isSidebarOpen
-						? <div className="flex items-center h-15">
-							<img src={siteLogo} className="w-full h-full" />
-							<span className="text-[var(--color-accent-blue)] text-2xl">ReciPal</span>
-						</div>
-						: <img src={siteLogoWithText} />
-					}
+					<div className="hidden md:flex items-center h-16 w-full">
+						<img src={isSidebarOpen ? siteLogo : siteLogoWithText} className="object-cover h-full w-full" />
+						{isSidebarOpen && <span className="text-[var(--color-accent-blue)] text-2xl">ReciPal</span>}
+					</div>
 				</Link>
-				<div className="flex flex-col items-center gap-3 py-5 w-full">
+				<div className="flex flex-col items-center gap-3 py-16 md:py-5 w-full">
 					<Link
 						to="/"
 						activeProps={{
